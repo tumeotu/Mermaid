@@ -19,7 +19,7 @@
 
 # :memo: Bài làm
 ## Seminar #1 - Mermaid
-### tags: ==TKPM-Mermaid==
+### tags: TKPM-Mermaid
 ## Cú pháp Mermaid
     https://mermaid-js.github.io/mermaid/#/    
 ## Luyện tập
