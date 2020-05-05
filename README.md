@@ -2,10 +2,10 @@
 # Bài tập thực hành Mermaid, Markdown
 
 
-> Môn học: Thiết kế phần mềm\n
-> Lớp: 17_12\n
-> Khoa: Công nghệ thông tin\r\n
-> Giáo viên hướng dẫn: Ngô Ngọc Đăng Khoa%n
+Môn học: Thiết kế phần mềm
+Lớp: 17_12
+Khoa: Công nghệ thông tin
+Giáo viên hướng dẫn: Ngô Ngọc Đăng Khoa
 
 # :man: Danh sách thành viên
 
