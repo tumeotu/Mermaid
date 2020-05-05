@@ -21,9 +21,7 @@
 ## Seminar #1 - Mermaid
 ### tags: ==TKPM-Mermaid==
 ## Cú pháp Mermaid
-    https://mermaid-js.github.io/mermaid/#/
-## Source code mermaid
-    
+    https://mermaid-js.github.io/mermaid/#/    
 ## Luyện tập
 ### Câu 1: Flow chart
 #### Ước chung lớn nhất
