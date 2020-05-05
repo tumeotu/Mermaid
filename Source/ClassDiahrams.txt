@@ -1,0 +1,69 @@
+classDiagram
+    Customer "1" *-- "1" Adress:has
+    Customer <|-- PrimiumCustomer
+    Customer <|-- RegularCustomer
+    Customer "1" -- "*" Product
+    Customer -- PerchaseDetail
+    Customer <|-- Bill : belongs to
+    PerchaseDetail -- Product
+    Discount ..> PerchaseDetail
+    Bill ..> Discount
+    Bill ..> PerchaseDetail
+    Bill ..|> PaymentCounter :accepts
+    
+	class Customer{
+	String: cusName
+    int: CustID
+    int: cusPhnum
+    purchaseItem()
+    requestBill()
+    enterCusDetail()
+	}
+	class PrimiumCustomer{
+		int: primiumDiscount
+		enterCusDetail()
+	}
+	class RegularCustomer{
+		int: regularDiscount
+		enterCusDetail()
+	}
+    class Adress {
+      String: street
+      String: city
+      String: state
+      Zipcode:int
+      enterStreet()
+      enterCity()
+      enterState()
+      enterZipcode
+    }
+    class Product{
+        int: productID
+        String: productName
+        Float: productPrice
+        getPrice()
+        setPrice()
+    }
+    class PerchaseDetail{
+        int: cusID
+        int: quantity
+        Date: purchaseDate
+        productID
+        caculateTotalAmt()
+        generalPurchaseList()
+    }
+    class Discount{
+        discountType
+        discountValue
+        SelectDiscount()
+    }
+    class Bill{
+        payableAmt
+        caculatePayableAmt()
+        generalBill()
+    }
+    class PaymentCounter{
+        <<interface>>
+        caculatePayableAmt()
+        generalBill()
+    }

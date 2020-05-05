@@ -1,0 +1,18 @@
+Câu a: ước chung lớn nhất
+graph TD
+    S(Bắt đầu) --> A[/Khai báo biến: a, b, temp/]
+    A-->|Đọc a, b| B{a>=b ?}
+    B-->|Sai| D["Đổi chỗ a và b<br/>temp = a<br/>a = b<br/>b =           temp"]
+    D-->B
+    B-->|Đúng| C{b==0 ?}
+    C-->|Sai| E[temp = a%b<br/>a = b<br/>b = temp] --> C
+    C-->|Đúng| F[/Xuất a/]
+    F-->G(Kết thúc)
+Câu b: giải phương trình bậc 2
+graph TD
+    S(Bắt đầu) --> A[/Khai báo biến:<br/>a, b, c, D, x1, x2/]
+    A-->|Đọc a, b, c| B["Tính D <-(b*b - 4ac)"]
+	B --> C{D>=0 ?}
+	C -->|Đúng| D[/"Xuất:<br/>x1 = (-b+D^(1/2))/2a<br/>x2 =             (b+D^(1/2))/2a"/]
+	C -->|Sai| E[/"Xuất:<br/>Phương trình không có nghiệm thực"/]
+    E & D --> F(Kết thúc) 

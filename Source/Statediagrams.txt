@@ -1,0 +1,32 @@
+stateDiagram
+    [*] --> Idle
+    AccountActions --> DispenseMoney
+    DispenseMoney --> PrintReceipt
+    AccountActions --> PrintReceipt
+
+    PrintReceipt --> TransactionComplete
+    DispenseMoney --> TransactionComplete
+    TransactionComplete --> Idle
+
+    Idle --> VerifyAccount
+    state VerifyAccount {
+        state VerifyCard {
+            cardSubmitted
+            readCard
+            returnCard
+        }
+        state VerifyPin {
+            pinSubmitted
+            checkPin
+            returnCard
+        }
+        [*] --> VerifyCard
+        VerifyCard --> [*] : card not valid
+        VerifyCard --> CardValid
+        CardValid --> VerifyPin
+        VerifyPin --> PinCorrect
+        PinCorrect --> [*]
+        VerifyPin --> PinInCorrect
+        PinInCorrect --> VerifyPin: [tries < maxTries]/tries++
+    }
+    VerifyAccount --> Idle
